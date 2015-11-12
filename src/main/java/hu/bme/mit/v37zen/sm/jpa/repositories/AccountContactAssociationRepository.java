@@ -4,6 +4,7 @@ import hu.bme.mit.v37zen.sm.jpa.datamodel.Account;
 import hu.bme.mit.v37zen.sm.jpa.datamodel.AccountContactAssociation;
 import hu.bme.mit.v37zen.sm.jpa.datamodel.Contact;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -14,7 +15,7 @@ public interface AccountContactAssociationRepository extends JpaRepository<Accou
 	
 	List<AccountContactAssociation> findByStatus(String status);
 	
-	List<AccountContactAssociation> findByStartDate(String startDate);
+	List<AccountContactAssociation> findByStartDate(Date startDate);
 
 	List<AccountContactAssociation> findByAccountMRID(String mRID);
 	

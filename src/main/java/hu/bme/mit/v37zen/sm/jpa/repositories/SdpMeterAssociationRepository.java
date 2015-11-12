@@ -4,6 +4,7 @@ import hu.bme.mit.v37zen.sm.jpa.datamodel.MeterAsset;
 import hu.bme.mit.v37zen.sm.jpa.datamodel.SdpMeterAssociation;
 import hu.bme.mit.v37zen.sm.jpa.datamodel.ServiceDeliveryPoint;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -14,7 +15,7 @@ public interface SdpMeterAssociationRepository extends JpaRepository<SdpMeterAss
 	
 	List<SdpMeterAssociation> findByStatus(String status);
 	
-	List<SdpMeterAssociation> findByStartDate(String startDate);
+	List<SdpMeterAssociation> findByStartDate(Date startDate);
 
 	List<SdpMeterAssociation> findByMeterAssetMRID(String mRID);
 	

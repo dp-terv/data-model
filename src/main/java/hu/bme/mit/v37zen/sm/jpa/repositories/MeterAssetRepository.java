@@ -2,6 +2,7 @@ package hu.bme.mit.v37zen.sm.jpa.repositories;
 
 import hu.bme.mit.v37zen.sm.jpa.datamodel.MeterAsset;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -18,5 +19,5 @@ public interface MeterAssetRepository extends JpaRepository<MeterAsset, Long> {
 	
 	public List<MeterAsset> findByVirtualInd(String virtualInd);
 	
-	public List<MeterAsset> findByManufacturedDate(String manufacturedDate);
+	public List<MeterAsset> findByManufacturedDate(Date manufacturedDate);
 }

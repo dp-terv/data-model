@@ -4,6 +4,7 @@ import hu.bme.mit.v37zen.sm.jpa.datamodel.SdpServiceLocationAssociation;
 import hu.bme.mit.v37zen.sm.jpa.datamodel.ServiceDeliveryPoint;
 import hu.bme.mit.v37zen.sm.jpa.datamodel.ServiceLocation;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -14,7 +15,7 @@ public interface SdpServiceLocationAssociationRepository extends JpaRepository<S
 	
 	List<SdpServiceLocationAssociation> findByStatus(String status);
 	
-	List<SdpServiceLocationAssociation> findByStartDate(String startDate);
+	List<SdpServiceLocationAssociation> findByStartDate(Date startDate);
 
 	List<SdpServiceLocationAssociation> findByServiceLocationMRID(String mRID);
 	
