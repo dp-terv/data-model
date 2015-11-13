@@ -7,7 +7,7 @@ import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -18,7 +18,7 @@ public class IntervalReading extends BaseEntity {
     
 	public static final String METER_X_UDC_ASSET_ID = "METER_X_UDC_ASSET_ID";
 	
-	@OneToOne(fetch=FetchType.EAGER)
+	@ManyToOne(fetch=FetchType.EAGER)
 	private MeterAsset meterAsset;
 	
 	private String meterReferenceId;
